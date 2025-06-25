@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Airport Booking - Archana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Animate.css -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- FontAwesome for icons -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.7)
+        ),
+        url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80")
+          no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      padding-top: 50px;
+      min-height: 100vh;
+    }
+
+    .booking-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .form-label {
+      font-weight: 500;
+      color: #ffc107;
+    }
+
+    .btn-custom {
+      background-color: #ff4081;
+      color: white;
+    }
+
+    .btn-custom:hover {
+      background-color: #e91e63;
+    }
+
+    a.back-link {
+      color: #ffc107;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    a.back-link:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      color: #00ffff;
+    }
+
+    /* Fix for select color */
+    .form-control,
+    .form-select {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: none;
+      color: black; /* default black text inside inputs */
+    }
+
+    /* Make selected option text white on dark theme */
+    .form-select {
+      color: white !important;
+      background-color: rgba(255, 255, 255, 0.1) !important; /* subtle transparent background */
+      border-radius: 5px;
+    }
+
+    /* Dropdown options black on white for readability */
+    .form-select option {
+      color: black;
+      background-color: white;
+    }
+
+    /* For input text color white (like datetime-local) */
+    input[type="datetime-local"] {
+      color: black; /* datetime input text is black by default */
+      background-color: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 5px;
+      padding: 0.375rem 0.75rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-center mb-4 animate__animated animate__fadeInDown">
+      <h2><i class="fas fa-plane-departure"></i> Airport Booking</h2>
+      <p class="text-muted">Book your flight with preferred airlines and flight options</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-10 booking-box animate__animated animate__fadeInUp">
+        <form action="thank you1.html" method="GET">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label" for="name">Full Name</label>
+              <input type="text" name="name" id="name" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="email">Email ID</label>
+              <input type="email" name="email" id="email" class="form-control" required />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label" for="passengers">Number of Passengers</label>
+              <input
+                type="number"
+                name="passengers"
+                id="passengers"
+                min="1"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label" for="flightType">Flight Type</label>
+              <select
+                name="flightType"
+                id="flightType"
+                class="form-select"
+                required
+                onchange="
+                  document.getElementById('airline-options').style.display = this.value ? 'block' : 'none';
+                  document.getElementById('return-date-div').style.display = this.value === 'roundtrip' ? 'block' : 'none';
+                "
+              >
+                <option value="">-- Select --</option>
+                <option value="oneway">One Way</option>
+                <option value="roundtrip">Round Trip</option>
+                <option value="multi">Multi-city</option>
+              </select>
+            </div>
+
+            <div class="col-md-12" id="airline-options" style="display:none;">
+              <label class="form-label" for="airline">Preferred Airline</label>
+              <select name="airline" id="airline" class="form-select">
+                <option value="">-- Select Airline --</option>
+                <option>Air India</option>
+                <option>IndiGo</option>
+                <option>SpiceJet</option>
+                <option>Vistara</option>
+                <option>GoAir</option>
+                <option>Emirates</option>
+                <option>Qatar Airways</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label" for="departure">Departure Airport</label>
+              <input
+                type="text"
+                name="departure"
+                id="departure"
+                placeholder="e.g. Delhi (DEL)"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label" for="arrival">Arrival Airport</label>
+              <input
+                type="text"
+                name="arrival"
+                id="arrival"
+                placeholder="e.g. Mumbai (BOM)"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label" for="departDate">Departure Date & Time</label>
+              <input
+                type="datetime-local"
+                name="departDate"
+                id="departDate"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <div class="col-md-6" id="return-date-div" style="display:none;">
+              <label class="form-label" for="returnDate">Return Date & Time</label>
+              <input
+                type="datetime-local"
+                name="returnDate"
+                id="returnDate"
+                class="form-control"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label" for="classType">Class</label>
+              <select name="classType" id="classType" class="form-select" required>
+                <option value="">-- Select Class --</option>
+                <option>Economy</option>
+                <option>Premium Economy</option>
+                <option>Business</option>
+                <option>First Class</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label" for="mealPref">Meal Preference</label>
+              <select name="mealPref" id="mealPref" class="form-select" required>
+                <option value="">-- Select Meal --</option>
+                <option>Vegetarian</option>
+                <option>Non-Vegetarian</option>
+                <option>Vegan</option>
+                <option>Gluten-Free</option>
+                <option>None</option>
+              </select>
+            </div>
+
+            <div class="col-12 text-center mt-4">
+              <button type="submit" class="btn btn-custom px-4">
+                Confirm Booking
+              </button>
+            </div>
+
+            <div class="text-center mt-4">
+              <a href="services.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Services
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

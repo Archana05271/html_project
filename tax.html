@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taxi Services - Archana Travel</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- FontAwesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://img.freepik.com/vecteurs-premium/taxi-plat-vector-illustration-taxi-dessin-main-illustration-vectorielle-isole_501705-320.jpg?w=2000') no-repeat center center fixed;
+      background-size: cover;
+      color: #f0f8ff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      animation: fadeInTop 1.5s ease-in-out;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ffd700;
+    }
+
+    .header p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .taxi-section {
+      margin-top: 40px;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 1.2s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6);
+    }
+
+    .card img {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      color: #fff;
+    }
+
+    .btn-custom {
+      background-color: #ff4081;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .btn-custom:hover {
+      background-color: #e60073;
+    }
+
+    .back-link {
+      color: #ffc107;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 30px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* CSS Animations */
+    @keyframes fadeInTop {
+      from {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1><i class="fas fa-taxi"></i> Taxi Services</h1>
+      <p>Reliable, comfortable and affordable taxi services for your travel needs.</p>
+    </div>
+
+    <div class="row taxi-section g-4">
+      <div class="col-md-4">
+        <div class="card text-center h-100">
+          <img src="https://i.pinimg.com/736x/c5/ca/96/c5ca96f7ad72ff90391b496818346103.jpg" class="card-img-top" alt="City Rides">
+          <div class="card-body">
+            <h5 class="card-title">City Rides</h5>
+            <p class="card-text">Quick, clean and comfortable taxis for everyday city commuting.</p>
+			<a href="booking2.html" class="btn btn-custom mt-3"><i class="fas fa-book"></i> Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center h-100">
+          <img src="https://www.allmiles.in/images/rides/ride_outstation.jpg" class="card-img-top" alt="Outstation Trips">
+          <div class="card-body">
+            <h5 class="card-title">Outstation Trips</h5>
+            <p class="card-text">Planning a long trip? Our taxis are ready to take you anywhere across the country.</p>
+			<a href="booking2.html" class="btn btn-custom mt-3"><i class="fas fa-book"></i> Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center h-100">
+          <img src="https://www.fanddtaxis.co.uk/wp-content/uploads/2019/02/airport-transfer1.jpg" class="card-img-top" alt="Airport Transfers">
+          <div class="card-body">
+            <h5 class="card-title">Airport Transfers</h5>
+            <p class="card-text">On-time pickups and drop-offs to and from all major airports.</p>
+            <a href="booking2.html" class="btn btn-custom mt-3"><i class="fas fa-book"></i> Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="services.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Services
+      </a>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mountain Destinations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome for Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      /* fallback background if carousel doesn't cover whole page */
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      color: white;
+    }
+
+    .navbar {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px 30px;
+    }
+
+    .navbar a {
+      color: #AFE1AF;
+      text-decoration: none;
+      margin: 15px;
+      font-size: 18px;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+      color: #a2d5a2;
+    }
+
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .carousel-heart {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 24px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 8px;
+      border-radius: 50%;
+    }
+
+    .content {
+      margin: 40px auto 80px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      color: #AFE1AF;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .destination img {
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .destination {
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="services.html"><i class="fas fa-arrow-left"></i> Back to Services</a>
+    <a href="design.html"><i class="fas fa-mountain"></i> Back to Destination</a>
+  </div>
+
+  <!-- Carousel -->
+  <div
+    id="mountainCarousel"
+    class="carousel slide position-relative"
+    data-bs-ride="carousel"
+    data-bs-interval="3000"
+  >
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <i class="fas fa-heart carousel-heart"></i>
+        <img
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
+          class="d-block w-100"
+          height="500px"
+          alt="Himalayas"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Himalayas</h5>
+          <p>Majestic snow-capped peaks and spiritual serenity.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <i class="fas fa-heart carousel-heart"></i>
+        <img
+          src="https://blog.mystart.com/wp-content/uploads/shutterstock_124222435-e1521832609986.jpg"
+          class="d-block w-100"
+          height="500px"
+          alt="Swiss Alps"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Swiss Alps</h5>
+          <p>Snowy peaks and charming alpine villages.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <i class="fas fa-heart carousel-heart"></i>
+        <img
+          src="https://images.hdqwalls.com/wallpapers/mountain-scenery-morning-sun-rays-4k-kf.jpg"
+          class="d-block w-100"
+          height="500px"
+          alt="Rocky Mountains"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Rocky Mountains</h5>
+          <p>Expansive wilderness and thrilling adventures.</p>
+        </div>
+      </div>
+
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#mountainCarousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#mountainCarousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Explore Beautiful Mountain Destinations</h1>
+
+    <div class="destination">
+      <img
+        src="https://lp-cms-production.imgix.net/2021-01/GettyRF_450207051.jpg?auto=format,compress&q=72&w=1440&h=810&fit=crop"
+        alt="Himalayas"
+        width="400px"
+      />
+      <h2>Himalayas and Ladakh</h2>
+      <p>Witness majestic snow-capped peaks and breathtaking landscapes.</p>
+      <p>
+        Embark on thrilling trekking adventures, visit ancient monasteries, and experience
+        the rich culture of the Himalayan region.
+      </p>
+    </div>
+
+    <div class="destination">
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/5c0f0e23af209675771265b8/1726828311924-UULKAMGA9PQYY6NDM61T/unsplash-image-qZBZb-G0eEU.jpg"
+        alt="Swiss Alps"
+        width="400px"
+      />
+      <h2>Swiss Alps and Italy Alps</h2>
+      <p>Explore the stunning mountains of Switzerland, perfect for adventure seekers and nature lovers.</p>
+      <p>
+        Enjoy skiing, snowboarding, and breathtaking views of the Matterhorn and surrounding peaks.
+        Experience charming alpine villages and delicious Swiss cuisine.
+      </p>
+    </div>
+
+    <div class="destination">
+      <p><i>For Booking, go back to Services page.</i></p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

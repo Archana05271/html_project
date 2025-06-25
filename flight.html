@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flight Reservations - Archana</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Animate.css -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+  
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://media.istockphoto.com/id/155380716/photo/commercial-jet-flying-over-clouds.jpg?s=612x612&w=0&k=20&c=idhnJ7ZdrLA1Dv5GO2R28A8WCx1SXCFVLu5_2cfdvXw=')
+        no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .navbar-custom {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    .navbar-brand {
+      color: #00bfff;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    .navbar .nav-link {
+      color: #a7c7e7;
+      font-size: 18px;
+    }
+
+    .navbar .nav-link:hover {
+      color: pink;
+    }
+
+    .content {
+      text-align: center;
+      margin-top: 100px;
+      padding: 20px;
+    }
+
+    .content h1 {
+      color: aqua;
+      font-weight: bold;
+    }
+
+    .content h2 {
+      color: #e0ffff;
+    }
+
+    .card {
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+    }
+
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin-top: 15px;
+      color: #0a58ca;
+    }
+
+    .book-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      font-weight: 600;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-btn:hover {
+      background-color: #0056b3;
+      color: white;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #ccc;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fas fa-plane-departure"></i> Archana</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="services.html"><i class="fas fa-arrow-left"></i> Back to Services</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="content container">
+    <h1 class="animate__animated animate__fadeInDown">Flight Reservations</h1>
+    <h2 class="animate__animated animate__fadeInUp">Book affordable and luxurious flights worldwide.</h2>
+  </div>
+
+  <!-- Flight Cards -->
+  <div class="container py-5">
+    <div class="row justify-content-center g-4">
+      <!-- First Class -->
+      <div class="col-md-4 animate__animated animate__zoomIn animate__delay-1s">
+        <div class="card h-100 text-center p-3">
+          <img src="https://thedesignair.net/wp-content/uploads/2022/12/acumen-future-first-012.png?w=2800" alt="First Class" class="img-fluid">
+          <h3>First Class</h3>
+          <p>Experience premium luxury in the skies.</p>
+          <p><strong>$1200/trip</strong></p>
+          <a href="booking1.html" class="book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Business Class -->
+      <div class="col-md-4 animate__animated animate__zoomIn animate__delay-2s">
+        <div class="card h-100 text-center p-3">
+          <img src="https://travel-dealz.com/app/uploads/sites/2/Lufthansa-Allegris-Business-Class-Header-1100x733.jpg" alt="Business Class" class="img-fluid">
+          <h3>Business Class</h3>
+          <p>Travel in style and comfort.</p>
+          <p><strong>$800/trip</strong></p>
+          <a href="booking1.html" class="book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Economy Class -->
+      <div class="col-md-4 animate__animated animate__zoomIn animate__delay-3s">
+        <div class="card h-100 text-center p-3">
+          <img src="https://mainlymiles.com/wp-content/uploads/2023/07/BA-New-First-A380-British-Airways.jpg" alt="Economy Class" class="img-fluid">
+          <h3>Economy Class</h3>
+          <p>Affordable flights for every traveler.</p>
+          <p><strong>$400/trip</strong></p>
+          <a href="booking1.html" class="book-btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="btn btn-primary back-to-top" title="Back to Top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Archana Flights | All Rights Reserved</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Booking - Archana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://www.salamanderdc.com/images/hero/full/LivingRoomReimagined-1920x1200.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .booking-container {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      max-width: 850px;
+      margin: 50px auto;
+    }
+
+    .form-label, label {
+      color: #f8f9fa;
+    }
+
+    .form-control, .form-select {
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .btn-book {
+      background-color: #795548;
+      color: white;
+      font-weight: bold;
+    }
+
+    .btn-book:hover {
+      background-color: #e91e63;
+    }
+
+    .back-link {
+      color: #b2dfdb;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    h2 {
+      color: #ffc107;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .form-icon {
+      margin-right: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="booking-container">
+  <h2><i class="bi bi-building"></i> Book Your Hotel</h2>
+  <form action="thank you.html" method="get">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label"><i class="bi bi-person-fill form-icon"></i>Name</label>
+        <input type="text" class="form-control" name="name" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"><i class="bi bi-envelope-fill form-icon"></i>Email</label>
+        <input type="email" class="form-control" name="email" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"><i class="bi bi-people-fill form-icon"></i>Guests</label>
+        <input type="number" min="1" class="form-control" name="guests" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"><i class="bi bi-calendar-event form-icon"></i>Check-in</label>
+        <input type="date" class="form-control" name="checkin" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"><i class="bi bi-calendar2-check form-icon"></i>Check-out</label>
+        <input type="date" class="form-control" name="checkout" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"><i class="bi bi-globe2 form-icon"></i>Hotel Type</label>
+        <select class="form-select" name="hotelType" required>
+          <option value="">-- Select --</option>
+          <option>Beach</option>
+          <option>Mountain</option>
+          <option>Cityscaper</option>
+        </select>
+      </div>
+
+      <div class="col-12">
+        <label class="form-label"><i class="bi bi-house-heart form-icon"></i>Select Hotel</label>
+        <select class="form-select" name="hotel">
+          <option disabled selected>Select hotel</option>
+          <option>Sunset Resort</option>
+          <option>Ocean Bliss</option>
+          <option>Bali Paradise</option>
+          <option>Alpine Lodge</option>
+          <option>Everest Retreat</option>
+          <option>Manhattan Grand</option>
+          <option>Shibuya Heights</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label"><i class="bi bi-door-open form-icon"></i>Room Type</label>
+        <select class="form-select" name="room">
+          <option>Single Bed</option>
+          <option>Double Bed</option>
+          <option>Hall</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"><i class="bi bi-snow form-icon"></i>AC/Non-AC</label>
+        <select class="form-select" name="ac">
+          <option>AC</option>
+          <option>Non-AC</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-book"><i class="bi bi-check-circle"></i> Confirm Booking</button><br>
+      <a href="services.html" class="back-link"><i class="bi bi-arrow-left-circle-fill"></i> Back to Services</a>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
